@@ -111,12 +111,46 @@ export default {
             height: "0",
           },
         },
+        "pixel-float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "retro-glow": {
+          "0%, 100%": { textShadow: "0 0 5px currentColor" },
+          "50%": { textShadow: "0 0 20px currentColor, 0 0 30px currentColor" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pixel-float": "pixel-float 3s ease-in-out infinite",
+        "retro-glow": "retro-glow 2s ease-in-out infinite alternate",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: { addUtilities: any }) {
+      const newUtilities = {
+        ".text-shadow-pixel": {
+          textShadow: "2px 2px 0px #000000, 4px 4px 0px rgba(0,0,0,0.5)",
+        },
+        ".text-shadow-retro": {
+          textShadow:
+            "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor",
+        },
+        ".font-pixel": {
+          fontFamily: "monospace",
+          fontWeight: "bold",
+        },
+        ".retro-border": {
+          border: "2px solid",
+          borderImageSource:
+            "linear-gradient(45deg, hsl(var(--retro-yellow)), hsl(var(--retro-orange)), hsl(var(--retro-red)), hsl(var(--retro-blue-bright)))",
+          borderImageSlice: "1",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 } satisfies Config;
