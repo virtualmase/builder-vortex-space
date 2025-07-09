@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -91,9 +92,9 @@ export default function Index() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 px-6 py-4 border-b border-yellow-400/20 backdrop-blur-sm">
+      <nav className="sticky top-0 z-50 px-6 py-4 border-b border-yellow-400/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-orange-700 to-orange-600 rounded-lg flex items-center justify-center shadow-lg">
               <span className="text-yellow-400 font-bold text-xl">B</span>
             </div>
@@ -111,37 +112,37 @@ export default function Index() {
                 QUANTUM LEAP
               </p>
             </div>
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#legend"
+            <Link
+              to="/legend"
               className="text-yellow-400 hover:text-orange-300 transition-colors"
               style={{ fontFamily: "monospace" }}
             >
               The Legend
-            </a>
-            <a
-              href="#legion"
+            </Link>
+            <Link
+              to="/legion"
               className="text-yellow-400 hover:text-orange-300 transition-colors"
               style={{ fontFamily: "monospace" }}
             >
               Rex's Legion
-            </a>
-            <a
-              href="#vision"
+            </Link>
+            <Link
+              to="/vision"
               className="text-yellow-400 hover:text-orange-300 transition-colors"
               style={{ fontFamily: "monospace" }}
             >
               Strategic Vision
-            </a>
-            <a
-              href="#protocol"
+            </Link>
+            <Link
+              to="/protocol"
               className="text-yellow-400 hover:text-orange-300 transition-colors"
               style={{ fontFamily: "monospace" }}
             >
               Primal Protocol
-            </a>
+            </Link>
           </div>
 
           <Button className="bg-gradient-to-r from-orange-500 to-yellow-400 text-black font-bold px-6 hover:from-yellow-400 hover:to-orange-300 transition-all duration-300 shadow-lg border-2 border-yellow-400/50">
