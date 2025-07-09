@@ -343,6 +343,274 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="relative z-10 bg-black/80 border-t border-yellow-400/20 mt-20">
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-br from-orange-700 to-orange-600 rounded-lg flex items-center justify-center">
+                  <span className="text-yellow-400 font-bold">B</span>
+                </div>
+                <h3
+                  className="text-xl font-bold text-yellow-400"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  BITTENSAUR
+                </h3>
+              </div>
+              <p
+                className="text-orange-300 text-sm leading-relaxed"
+                style={{ fontFamily: "monospace" }}
+              >
+                The premier digital twin platform bridging ancient Stoic wisdom
+                with quantum blockchain technology. From Rome to the TAO mesh -
+                experience the future of decentralized AI and cryptocurrency
+                innovation.
+              </p>
+              <div className="flex space-x-4">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black"
+                >
+                  Twitter
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black"
+                >
+                  Discord
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black"
+                >
+                  GitHub
+                </Button>
+              </div>
+            </div>
+
+            {/* Products & Services */}
+            <div className="space-y-4">
+              <h4
+                className="text-lg font-bold text-yellow-400"
+                style={{ fontFamily: "monospace" }}
+              >
+                PRODUCTS & SERVICES
+              </h4>
+              <ul
+                className="space-y-2 text-orange-300 text-sm"
+                style={{ fontFamily: "monospace" }}
+              >
+                <li>
+                  <Link
+                    to="/legend"
+                    className="hover:text-yellow-400 transition-colors"
+                  >
+                    Digital Twin Technology
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/legion"
+                    className="hover:text-yellow-400 transition-colors"
+                  >
+                    AI Agent Network
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/protocol"
+                    className="hover:text-yellow-400 transition-colors"
+                  >
+                    Blockchain Protocol
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/vision"
+                    className="hover:text-yellow-400 transition-colors"
+                  >
+                    TAO Mesh Integration
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/connect"
+                    className="hover:text-yellow-400 transition-colors"
+                  >
+                    Bittensor Network
+                  </Link>
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Stoic Wisdom Engine
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Quantum Computing
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  DeFi Solutions
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div className="space-y-4">
+              <h4
+                className="text-lg font-bold text-yellow-400"
+                style={{ fontFamily: "monospace" }}
+              >
+                RESOURCES
+              </h4>
+              <ul
+                className="space-y-2 text-orange-300 text-sm"
+                style={{ fontFamily: "monospace" }}
+              >
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Documentation
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  API Reference
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Developer Guide
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  White Paper
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Research Papers
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Blog & News
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Community Forum
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Help Center
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal & Security */}
+            <div className="space-y-4">
+              <h4
+                className="text-lg font-bold text-yellow-400"
+                style={{ fontFamily: "monospace" }}
+              >
+                LEGAL & SECURITY
+              </h4>
+              <ul
+                className="space-y-2 text-orange-300 text-sm"
+                style={{ fontFamily: "monospace" }}
+              >
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Privacy Policy
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Terms of Service
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Cookie Policy
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Security Audits
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Compliance
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Bug Bounty
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Risk Disclosure
+                </li>
+                <li className="hover:text-yellow-400 transition-colors cursor-pointer">
+                  Regulatory Info
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* SEO Keywords Section */}
+          <div className="border-t border-yellow-400/20 pt-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h5
+                  className="text-md font-bold text-yellow-400 mb-3"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  BLOCKCHAIN & CRYPTOCURRENCY
+                </h5>
+                <p
+                  className="text-orange-300 text-xs leading-relaxed"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  Bitcoin integration, TAO token, Bittensor network,
+                  decentralized finance (DeFi), cryptocurrency trading,
+                  blockchain protocol, smart contracts, digital assets, crypto
+                  wallet, mining, staking, yield farming, liquidity pools, NFTs,
+                  Web3.
+                </p>
+              </div>
+              <div>
+                <h5
+                  className="text-md font-bold text-yellow-400 mb-3"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  AI & TECHNOLOGY
+                </h5>
+                <p
+                  className="text-orange-300 text-xs leading-relaxed"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  Artificial intelligence, machine learning, neural networks,
+                  quantum computing, digital twins, AI agents, autonomous
+                  systems, computer vision, natural language processing, deep
+                  learning, edge computing, IoT integration, cloud computing,
+                  cybersecurity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Footer */}
+          <div className="border-t border-yellow-400/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div
+              className="text-orange-300 text-sm mb-4 md:mb-0"
+              style={{ fontFamily: "monospace" }}
+            >
+              © 2024 Bittensaur Technologies. All rights reserved.
+              <span className="block md:inline md:ml-2">
+                Digital Twin • Quantum Leap • Stoic Protocol
+              </span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span
+                className="text-orange-300 text-xs"
+                style={{ fontFamily: "monospace" }}
+              >
+                Powered by TAO Mesh
+              </span>
+              <div className="flex items-center space-x-1">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span
+                  className="text-green-400 text-xs"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  Network Active
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
