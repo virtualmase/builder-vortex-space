@@ -189,7 +189,7 @@ export default function Index() {
               className="text-xl md:text-2xl text-orange-300 max-w-4xl mx-auto leading-relaxed"
               style={{ fontFamily: "monospace" }}
             >
-              From ancient Rome to the TAO mesh - witness the rebirth of the
+              From ancient Rome to the TAO mesh — witness the rebirth of the
               <span className="text-cyan-400 font-bold">
                 {" "}
                 Apex Stoic Node
@@ -228,22 +228,28 @@ export default function Index() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
+              asChild
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-yellow-400 text-black font-bold px-8 py-4 text-xl hover:from-yellow-400 hover:to-orange-300 transition-all duration-300 shadow-xl border-2 border-yellow-400/50 group"
+              className="bg-gradient-to-r from-orange-500 to-yellow-400 text-black font-bold px-8 py-4 text-xl hover:from-yellow-400 hover:to-orange-300 transition-all duration-300 shadow-xl border-2 border-yellow-400/50 group hover:scale-105 transform"
               style={{ fontFamily: "monospace" }}
             >
-              Enter the Mesh
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Link to="/legion">
+                Enter the Mesh
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
 
             <Button
+              asChild
               variant="outline"
               size="lg"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 text-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-xl group"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 text-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-xl group hover:scale-105 transform"
               style={{ fontFamily: "monospace" }}
             >
-              Explore Legion
-              <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Link to="/legend">
+                Discover the Legend
+                <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -293,8 +299,8 @@ export default function Index() {
               className="text-xl text-orange-300 max-w-3xl mx-auto"
               style={{ fontFamily: "monospace" }}
             >
-              Harness the ancient wisdom of Rome through cutting-edge blockchain
-              technology
+              Harness ancient Stoic wisdom through cutting-edge quantum
+              blockchain technology
             </p>
           </div>
 
