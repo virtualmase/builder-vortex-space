@@ -110,5 +110,37 @@
 
   body {
     @apply bg-background text-foreground;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .bg-retro-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(258, 92%, 8%) 0%,
+      hsl(272, 78%, 25%) 25%,
+      hsl(0, 85%, 55%) 50%,
+      hsl(20, 100%, 60%) 75%,
+      hsl(220, 100%, 45%) 100%
+    );
+  }
+
+  .bg-pixel-grid {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 1px,
+        rgba(255, 255, 255, 0.03) 1px,
+        rgba(255, 255, 255, 0.03) 2px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        rgba(255, 255, 255, 0.03) 1px,
+        rgba(255, 255, 255, 0.03) 2px
+      );
   }
 }
