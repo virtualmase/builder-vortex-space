@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Loading } from "@/components/ui/loading";
 import {
   ChevronRight,
   Zap,
@@ -11,10 +12,13 @@ import {
   Users,
   Star,
   ArrowRight,
+  AlertCircle,
 } from "lucide-react";
 
 export default function Index() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
 
   const features = [
     {
@@ -157,19 +161,44 @@ export default function Index() {
           {/* Main Character Image */}
           <div className="mb-8 relative">
             <div className="inline-block relative">
+              {imageLoading && (
+                <div className="w-96 h-96 rounded-3xl border-4 border-yellow-400/50 flex items-center justify-center bg-black/50">
+                  <Loading size="lg" text="Loading Bittensaur..." />
+                </div>
+              )}
+              {imageError && (
+                <div className="w-96 h-96 rounded-3xl border-4 border-red-400/50 flex items-center justify-center bg-black/50">
+                  <div className="text-center">
+                    <AlertCircle className="w-16 h-16 text-red-400 mx-auto mb-4" />
+                    <p className="text-red-400 font-mono">
+                      Failed to load image
+                    </p>
+                  </div>
+                </div>
+              )}
               <img
                 src="https://cdn.builder.io/api/v1/assets/ef3faeff1b9f473b96a37231f864c2da/20250709_0301_bittensaur-quantum-leap_remix_01jzqa14qwesr8gwpv9sp8zywz-ce4d75?format=webp&width=800"
-                alt="Bittensaur Quantum Leap"
-                className="w-96 h-96 object-contain mx-auto rounded-3xl shadow-2xl border-4 border-yellow-400/50"
+                alt="Bittensaur Quantum Leap - Digital Twin Dinosaur with Bitcoin Integration"
+                className={`w-96 h-96 object-contain mx-auto rounded-3xl shadow-2xl border-4 border-yellow-400/50 transition-opacity duration-500 ${
+                  imageLoading ? "opacity-0 absolute" : "opacity-100"
+                }`}
+                onLoad={() => setImageLoading(false)}
+                onError={() => {
+                  setImageLoading(false);
+                  setImageError(true);
+                }}
+                loading="eager"
               />
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-yellow-400 px-4 py-2 rounded-full border-2 border-yellow-400/50">
-                <span
-                  className="text-black font-bold"
-                  style={{ fontFamily: "monospace" }}
-                >
-                  QUANTUM LEAP™
-                </span>
-              </div>
+              {!imageLoading && !imageError && (
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-yellow-400 px-4 py-2 rounded-full border-2 border-yellow-400/50 animate-pulse">
+                  <span
+                    className="text-black font-bold"
+                    style={{ fontFamily: "monospace" }}
+                  >
+                    QUANTUM LEAP™
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
