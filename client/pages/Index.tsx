@@ -13,12 +13,15 @@ import {
   Star,
   ArrowRight,
   AlertCircle,
+  Menu,
+  X,
 } from "lucide-react";
 
 export default function Index() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const features = [
     {
