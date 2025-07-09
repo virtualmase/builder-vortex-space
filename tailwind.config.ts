@@ -57,6 +57,37 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Retro Gaming Theme Colors
+        retro: {
+          purple: "hsl(var(--retro-purple))",
+          "purple-dark": "hsl(var(--retro-purple-dark))",
+          red: "hsl(var(--retro-red))",
+          orange: "hsl(var(--retro-orange))",
+          "orange-light": "hsl(var(--retro-orange-light))",
+          yellow: "hsl(var(--retro-yellow))",
+          blue: "hsl(var(--retro-blue))",
+          "blue-bright": "hsl(var(--retro-blue-bright))",
+          cyan: "hsl(var(--retro-cyan))",
+          brown: "hsl(var(--retro-brown))",
+          "brown-light": "hsl(var(--retro-brown-light))",
+          black: "hsl(var(--retro-black))",
+        },
+        bitcoin: "hsl(var(--bitcoin))",
+      },
+      backgroundImage: {
+        "retro-gradient":
+          "linear-gradient(180deg, hsl(var(--retro-purple-dark)) 0%, hsl(var(--retro-purple)) 25%, hsl(var(--retro-red)) 50%, hsl(var(--retro-orange)) 75%, hsl(var(--retro-blue)) 100%)",
+        "pixel-grid":
+          "repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255,255,255,0.03) 1px, rgba(255,255,255,0.03) 2px), repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.03) 1px, rgba(255,255,255,0.03) 2px)",
+      },
+      fontFamily: {
+        pixel: ["monospace"],
+        retro: ["Orbitron", "monospace"],
+      },
+      textShadow: {
+        pixel: "2px 2px 0px #000000, 4px 4px 0px rgba(0,0,0,0.5)",
+        retro:
+          "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor",
       },
       borderRadius: {
         lg: "var(--radius)",
