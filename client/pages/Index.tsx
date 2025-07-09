@@ -1,20 +1,4 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import {
-  ChevronRight,
-  Zap,
-  Shield,
-  Coins,
-  Users,
-  Star,
-  ArrowRight,
-} from "lucide-react";
-
 export default function Index() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
   const features = [
     {
       icon: <Zap className="w-8 h-8" />,
