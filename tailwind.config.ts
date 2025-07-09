@@ -74,12 +74,7 @@ export default {
         },
         bitcoin: "hsl(var(--bitcoin))",
       },
-      backgroundImage: {
-        "retro-gradient":
-          "linear-gradient(180deg, hsl(var(--retro-purple-dark)) 0%, hsl(var(--retro-purple)) 25%, hsl(var(--retro-red)) 50%, hsl(var(--retro-orange)) 75%, hsl(var(--retro-blue)) 100%)",
-        "pixel-grid":
-          "repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255,255,255,0.03) 1px, rgba(255,255,255,0.03) 2px), repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.03) 1px, rgba(255,255,255,0.03) 2px)",
-      },
+
       fontFamily: {
         pixel: ["monospace"],
         retro: ["Orbitron", "monospace"],
